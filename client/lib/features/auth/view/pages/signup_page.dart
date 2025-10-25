@@ -1,3 +1,4 @@
+import 'package:client/features/auth/view/widgets/custom_field.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -20,7 +21,12 @@ class _SignUpPageState extends State<SignUpPage> {
               fontSize: 50,
               fontWeight: FontWeight.bold,
             ),
-          )
+          ),
+          CustomField(
+            hintText: "Name",
+          ),
+          CustomField(hintText: "Email"),
+          CustomField(hintText: "Password"),
         ],
       ),
     );
