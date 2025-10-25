@@ -58,6 +58,7 @@ class _SignUpPageState extends State<SignUpPage> {
             CustomField(
               controller: passwordController,
               hintText: "Password",
+              isObscureText: true,
             ),
             const SizedBox(
               height: 15,
