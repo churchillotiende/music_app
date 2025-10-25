@@ -1,7 +1,16 @@
 from fastapi import FastAPI,Request
+from pydantic import BaseModel
 
 app = FastAPI()
-@app.post('/')
-async def test(request:Request):
-    print((await request.body()).decode())
-    return "Hello world"
+
+class UserCreate(BaseModel):
+    name:str
+    email:str
+    password:str
+
+@app.post('/signup')
+def signup_user(user:UserCreate):
+    print(user.name)
+    print(user.email)
+    print(user.password)
+    pass
