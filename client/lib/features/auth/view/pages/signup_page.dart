@@ -40,6 +40,9 @@ class _SignUpPageState extends State<SignUpPage> {
               height: 15,
             ),
             CustomField(hintText: "Password"),
+            const SizedBox(
+              height: 15,
+            ),
             AuthGradientButton(),
           ],
         ),
