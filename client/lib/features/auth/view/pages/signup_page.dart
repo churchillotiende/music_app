@@ -22,10 +22,19 @@ class _SignUpPageState extends State<SignUpPage> {
               fontWeight: FontWeight.bold,
             ),
           ),
+          const SizedBox(
+            height: 30,
+          ),
           CustomField(
             hintText: "Name",
           ),
+          const SizedBox(
+            height: 15,
+          ),
           CustomField(hintText: "Email"),
+          const SizedBox(
+            height: 15,
+          ),
           CustomField(hintText: "Password"),
         ],
       ),
