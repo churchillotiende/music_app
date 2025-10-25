@@ -3,14 +3,14 @@ import 'package:client/features/auth/view/widgets/auth_gradient_button.dart';
 import 'package:client/features/auth/view/widgets/custom_field.dart';
 import 'package:flutter/material.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({super.key});
+class SignInPage extends StatefulWidget {
+  const SignInPage({super.key});
 
   @override
-  State<SignUpPage> createState() => _SignUpPageState();
+  State<SignInPage> createState() => _SignInPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _SignInPageState extends State<SignInPage> {
   final nameController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
@@ -35,7 +35,7 @@ class _SignUpPageState extends State<SignUpPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                "Sign Up.",
+                "Sign In.",
                 style: TextStyle(
                   fontSize: 50,
                   fontWeight: FontWeight.bold,
@@ -43,13 +43,6 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               const SizedBox(
                 height: 30,
-              ),
-              CustomField(
-                controller: nameController,
-                hintText: "Name",
-              ),
-              const SizedBox(
-                height: 15,
               ),
               CustomField(
                 controller: emailController,
@@ -67,18 +60,18 @@ class _SignUpPageState extends State<SignUpPage> {
                 height: 15,
               ),
               AuthGradientButton(
-                buttonText: "Sign Up",
+                buttonText: "Sign In",
               ),
               const SizedBox(
                 height: 20,
               ),
               RichText(
                 text: TextSpan(
-                    text: "Already have an Account ? ",
+                    text: "Don\'t have an Account ? ",
                     style: Theme.of(context).textTheme.titleMedium,
                     children: [
                       TextSpan(
-                          text: "Sign In",
+                          text: "Sign Up",
                           style: TextStyle(
                             color: Pallete.gradient2,
                             fontWeight: FontWeight.bold,
